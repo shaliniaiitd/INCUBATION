@@ -177,3 +177,12 @@ ac.deposit(500)
 print(ac.get_balance())
 ac.withdraw(300)
 print(ac.get_balance())
+
+#ENCAPSULATION
+
+#PROTECTED
+# defined: using _variable_name
+# access: can be accessed and modified by object of the class and its derived class,
+# but as a good practise should not be modified by derived class.
+# 
+
