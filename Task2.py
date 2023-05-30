@@ -36,7 +36,28 @@ def map_multiple(functs,inpt):
 print(map_multiple(functs,[1,2,3,4]))
 
 # 4. Predict the output of following code:
+#50
+#checking
+f = lambda x,y : x if x>y else y
+
+l = [10,30,50,30,10]
+num= reduce(f,l)
+print(num)
+
 # 5. Find output of following:
+sqrt = lambda x : x**0.5
+functs = [sqrt,inverse]
+l = [1,4,16,64]
+ans = []
+for num in l:
+	res = num
+	for funct in functs:
+		res = funct(res)
+	ans.append(res)
+print(ans)
+
+#Ans = [1,1/2,1/4,1/8]
+
 # Python
 # Gaurav Gupta tuteur.py@gmail.com
 # 6. Use filter function to filter a list of numbers and strings such that the result contains only
@@ -52,7 +73,7 @@ print(list(filter(lambda x: isinstance(x,int), mixture)))
 l = ['3ft10in','4ft', '7in']
 def to_meters(ht):
         ht = ht.split('ft')
-        print(ht,len(ht))
+
         if len(ht)==1:
             ft = 0
             inch = ht[0].split('in')[0]
@@ -63,7 +84,6 @@ def to_meters(ht):
                 ft = ht[0]
                 inch = ht[1].split('in')[0]
 
-        print(ft,inch)
         meters = int(ft)*0.3048 + int(inch)*0.0254
         return meters
 
